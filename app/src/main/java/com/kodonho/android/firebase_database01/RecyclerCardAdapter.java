@@ -14,8 +14,6 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import static com.kodonho.android.firebase_database01.R.id.imageView;
-
 /**
  * Created by HM on 2016-09-28.
  */
