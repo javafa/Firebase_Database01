@@ -6,9 +6,13 @@ package com.kodonho.android.firebase_database01;
 
 public class MENU
 {
+    public MENU(){
+
+    }
+
     private String MENU_NAME;
 
-    private String MENU_PRICE;
+    private long MENU_PRICE;
 
     private String MENU_IMAGE;
 
@@ -20,11 +24,11 @@ public class MENU
         this.MENU_NAME = MENU_NAME;
     }
 
-    public String getMENU_PRICE (){
+    public long getMENU_PRICE (){
         return MENU_PRICE;
     }
 
-    public void setMENU_PRICE (String MENU_PRICE){
+    public void setMENU_PRICE (long MENU_PRICE){
         this.MENU_PRICE = MENU_PRICE;
     }
 

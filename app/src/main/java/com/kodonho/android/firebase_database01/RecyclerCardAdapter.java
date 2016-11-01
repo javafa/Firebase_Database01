@@ -40,29 +40,24 @@ public class RecyclerCardAdapter<T> extends RecyclerView.Adapter<RecyclerCardAda
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         T data = datas.get(position);
-
         if(data instanceof Branch){
             Glide.with(context).load(((Branch) data).getLOGO()).into(holder.image);
-
             holder.title.setText(((Branch) data).getBRANCH());
-            holder.price.setText(((Branch) data).getDELIVERY_FEE());
+            holder.price.setText(((Branch) data).getDELIVERY_FEE()+"");
+            holder.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, DetailActivity.class);
+                    intent.putExtra("position", position);
+                    context.startActivity(intent);
+                }
+            });
         }else if(data instanceof MENU){
-
             Glide.with(context).load(((MENU) data).getMENU_IMAGE()).into(holder.image);
             holder.title.setText(((MENU) data).getMENU_NAME());
-            holder.price.setText(((MENU) data).getMENU_PRICE());
+            holder.price.setText(((MENU) data).getMENU_PRICE()+"");
         }
-        holder.itemView.setTag(data);
-
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("position", position);
-                context.startActivity(intent);
-            }
-        });
-
+        //holder.itemView.setTag(data);
     }
 
     @Override

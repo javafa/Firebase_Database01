@@ -8,13 +8,17 @@ import java.util.List;
 
 public class Branch
 {
+    public Branch(){
+
+    }
+
     private List<MENU> MENU;
 
     private String NAME;
 
     private String LOGO;
 
-    private String DELIVERY_FEE;
+    private long DELIVERY_FEE;
 
     private String BRANCH;
 
@@ -48,12 +52,12 @@ public class Branch
         this.LOGO = LOGO;
     }
 
-    public String getDELIVERY_FEE ()
+    public long getDELIVERY_FEE ()
     {
         return DELIVERY_FEE;
     }
 
-    public void setDELIVERY_FEE (String DELIVERY_FEE)
+    public void setDELIVERY_FEE (long DELIVERY_FEE)
     {
         this.DELIVERY_FEE = DELIVERY_FEE;
     }
