@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         chickenRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                //branches = new ArrayList<>();
+                branches.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Branch branch = snapshot.getValue(Branch.class);
                     branches.add(branch);

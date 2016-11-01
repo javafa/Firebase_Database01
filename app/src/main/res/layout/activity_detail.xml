@@ -35,13 +35,14 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:id="@+id/listView" />
 
     <TextView
         android:text="Fee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4"
+        android:id="@+id/fee"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_alignBottom="@+id/imageView"
         android:layout_toRightOf="@+id/imageView"
@@ -51,19 +52,19 @@
         android:text="Branch Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5"
+        android:id="@+id/branch"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_above="@+id/textView4"
+        android:layout_above="@+id/fee"
         android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:id="@+id/store"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:text="Store Name"
-        android:layout_above="@+id/textView5"
+        android:layout_above="@+id/branch"
         android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView" />
 </RelativeLayout>

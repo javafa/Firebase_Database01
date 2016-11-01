@@ -12,18 +12,18 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by HM on 2016-09-28.
  */
 public class RecyclerCardAdapter<T> extends RecyclerView.Adapter<RecyclerCardAdapter.ViewHolder>{
 
-    ArrayList<T> datas;
+    List<T> datas;
     int itemLayout;
     Context context;
 
-    public RecyclerCardAdapter(ArrayList<T> datas, int itemLayout, Context context){
+    public RecyclerCardAdapter(List<T> datas, int itemLayout, Context context){
         this.datas = datas;
         this.itemLayout = itemLayout;
         this.context = context;
